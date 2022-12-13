@@ -20,7 +20,7 @@ namespace CalcMvcWeb.Controllers
         public ActionResult Process(CalcViewModel model)
         {
             var cs = new CalcService();
-            var result = cs.AddNumbers(model.Number1, model.Number2, model.Number3);
+            var result = cs.AddNumbers(model.Number1, model.Number2);
             model.Result = result;
             return View(model);
         }
