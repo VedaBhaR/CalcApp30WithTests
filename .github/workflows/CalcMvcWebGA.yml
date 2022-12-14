@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-restore
     - name: Test
-      run: dotnet test test/CalcMvcWeb.Tests E:\KpmgJMFEDotnet\POC\CalcApp30WithTests\test\CalcMvcWeb.Tests --no-build
+      run: dotnet test test/CalcMvcWeb.Tests/CalcServiceTests.cs --no-build
     - name: Publish
       run: dotnet publish "${{ env.WORKING_DIRECTORY }}" --configuration ${{ env.CONFIGURATION }} --no-build --output "${{ env.AZURE_WEBAPP_PACKAGE_PATH }}"
     - name: Publish Artifacts
